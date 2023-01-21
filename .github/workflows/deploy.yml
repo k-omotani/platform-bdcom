@@ -25,6 +25,7 @@ jobs:
         name: 'HelloHTTP'
         runtime: 'go119'
         region: 'asia-northeast1'
+        source_dir: 'handler/helloworld'
 
 
     # Example of using the output
