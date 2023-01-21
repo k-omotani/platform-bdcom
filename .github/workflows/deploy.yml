@@ -17,7 +17,7 @@ jobs:
       uses: 'google-github-actions/auth@v1'
       with:
         workload_identity_provider: 'projects/90532848382/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-        service_account: 'pf-bdcom@$PROJECT_ID.iam.gserviceaccount.com'
+        service_account: 'pf-bdcom@prefab-mapper-373309.iam.gserviceaccount.com'
 
     - id: 'deploy'
       uses: 'google-github-actions/deploy-cloud-functions@v1'
