@@ -24,7 +24,8 @@ jobs:
       with:
         name: 'hello'
         runtime: 'go119'
-        region: 'asia-northeast1'
+          # projectのregionをusで作っちゃってたのでここで指定してもダメだった。
+          #        region: 'asia-northeast1'
 
 
     # Example of using the output
