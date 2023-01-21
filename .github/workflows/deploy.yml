@@ -24,7 +24,7 @@ jobs:
       with:
         name: 'hello'
         runtime: 'go119'
-        region: 'asia-northeast1-a'
+        region: 'asia-northeast1'
 
 
     # Example of using the output
