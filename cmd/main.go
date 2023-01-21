@@ -1,17 +1,25 @@
 package main
 
 import (
+	"log"
+	"os"
 
-	"github.com/gin-gonic/gin"
+	// Blank-import the function package so the init() runs
+	_ "github.com/k-omotani/platform-bdcom"
+	"github.com/GoogleCloudPlatform/functions-framework-go/funcframework"
 )
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
-
+	// Use PORT environment variable, or default to 8080.
+	port := "8080"
+	if envPort := os.Getenv("PORT"); envPort != "" {
+		port = envPort
+	}
+	if err := funcframework.Start(port); err != nil {
+		log.Fatalf("funcframework.Start: %v\n", err)
+	}
 }
+
+
+
+
